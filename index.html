@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <title>Product Cards</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="product">
+        <div class="product-card">
+          <div class="image">
+            <img src="1.png" alt="" />
+          </div>
+          <div class="info">
+            <h2 class="name">Camera</h2>
+            <span class="price">$85.00</span>
+            <a class="view">Quick View</a>
+          </div>
+        </div>
+        <div class="quick-view">
+          <div class="quick-view-card">
+            <div class="image">
+              <img src="1.png" alt="" />
+            </div>
+            <div class="info">
+              <i class="fas fa-times close-btn"></i>
+              <h2 class="title">Camera<br /><span>DSLR</span></h2>
+              <p>
+                Australia, officially the Commonwealth of Australia, is a
+                sovereign country comprising the mainland of the Australian
+                continent, the island of Tasmania, and numerous smaller islands.
+                It is the largest country by area in Oceania and the world's
+                sixth-largest country.
+              </p>
+              <span class="price">$85.00</span>
+              <a class="busket">add to cart</a>
+              <a href="#" class="wanted">add to wishlist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-card">
+          <div class="image">
+            <img src="2.png" alt="" />
+          </div>
+          <div class="info">
+            <h2 class="name">Shoes</h2>
+            <span class="price">$65.00</span>
+            <a class="view">Quick View</a>
+          </div>
+        </div>
+        <div class="quick-view">
+          <div class="quick-view-card">
+            <div class="image">
+              <img src="2.png" alt="" />
+            </div>
+            <div class="info">
+              <i class="fas fa-times close-btn"></i>
+              <h2 class="title">Shoes<br /><span>Men</span></h2>
+              <p>
+                Australia, officially the Commonwealth of Australia, is a
+                sovereign country comprising the mainland of the Australian
+                continent, the island of Tasmania, and numerous smaller islands.
+                It is the largest country by area in Oceania and the world's
+                sixth-largest country.
+              </p>
+              <span class="price">$65.00</span>
+              <a class="busket">add to cart</a>
+              <a href="#" class="wanted">add to wishlist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-card">
+          <div class="image">
+            <img src="3.png" alt="" />
+          </div>
+          <div class="info">
+            <h2 class="name">Watch</h2>
+            <span class="price">$125.00</span>
+            <a class="view">Quick View</a>
+          </div>
+        </div>
+        <div class="quick-view">
+          <div class="quick-view-card">
+            <div class="image">
+              <img src="3.png" alt="" />
+            </div>
+            <div class="info">
+              <i class="fas fa-times close-btn"></i>
+              <h2 class="title">Watch<br /><span>Men</span></h2>
+              <p>
+                Australia, officially the Commonwealth of Australia, is a
+                sovereign country comprising the mainland of the Australian
+                continent, the island of Tasmania, and numerous smaller islands.
+                It is the largest country by area in Oceania and the world's
+                sixth-largest country.
+              </p>
+              <span class="price">$125.00</span>
+              <a class="busket">add to cart</a>
+              <a href="#" class="wanted">add to wishlist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const quickView = document.querySelectorAll(".product-card .view");
+    const closeBtn = document.querySelectorAll(".quick-view .close-btn");
+    const quickViewContainer = document.querySelectorAll(".quick-view");
+
+    quickView.forEach((view, idx) => {
+      view.addEventListener("click", () => {
+        quickViewContainer[idx].style.visibility = "visible";
+      });
+    });
+
+    closeBtn.forEach((btn, idx) => {
+      btn.addEventListener("click", () => {
+        quickViewContainer[idx].style.visibility = "hidden";
+      });
+    });
+  </script>
+</html>
